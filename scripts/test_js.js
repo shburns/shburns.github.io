@@ -3,5 +3,8 @@
 //***************************************************
 
 var testFunction = function () {
-	console.log("GitHub pages supports loading and using JS.");
+	console.log("Stepped into test function");
+	setTimeout(function () {
+		document.getElementById("testDynamicFunctionality").innerHTML = "We've successfully modified the DOM on our GitHub pages.";
+	}, 5000);
 };
