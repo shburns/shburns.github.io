@@ -1,0 +1,24 @@
+﻿.header {
+	text-align: center;
+	font-family: 'Arial', 'Courier New';
+	vertical-align: middle;
+	color: white;
+	background: none repeat scroll 0 0 #222;
+	position: relative;
+	padding: 40px 0 0 0;
+	margin: 0;
+	overflow: hidden;
+	outline: 0 none;
+	border: 0 none;
+}
+
+.title-text {
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 50px;
+}
+
+.special-button {
+	border-radius: 0px 0px;
+	background-color: white;
+}

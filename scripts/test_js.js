@@ -2,9 +2,10 @@
 // Testing the functionality of js on GitHub pages
 //***************************************************
 
-var testFunction = function () {
+var testFunction = function (fileRequested, domNodeId) {
 	console.log("Stepped into test function");
-	setTimeout(function () {
-		document.getElementById("testDynamicFunctionality").innerHTML = "We've successfully modified the DOM on our GitHub pages.";
-	}, 5000);
+	xhr.load(fileRequested, addResultToDom);
+	function addResultToDom(xhr) {
+		document.getElementById(domNodeId).innerHTML = xhr.response;
+	};
 };

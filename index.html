@@ -2,13 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>GitHub - Sean Burns</title>
+	 <link rel="stylesheet" href="/css/site.css" />
+	 <script src="/scripts/xhr_.js"></script>
 	 <script src="/scripts/test_js.js"></script>
 </head>
 <body>
+	<section class="header">
+		<h1 class="title-text">A Philosophy of Engineering</h1>
+		<button class="special-button" type="button">Blog Entry</button>
+	</section>
+	<section style="position: relative;">
 	<h1>Site Under Construction</h1>
 	<p>Please bear with me while I implement a site for myself/code/projects/things. <small>Hopefully it will prove worth while.</small></p>
 	<br />
-	<div id="testDynamicFunctionality"></div>
-	<script>testFunction();</script>
+	<div id="testDynamicFunctionality"></div></section>
+	<script>testFunction("/templates/", "testDynamicFunctionality");</script>
 </body>
 </html>
