@@ -19,6 +19,12 @@
 }
 
 .special-button {
-	border-radius: 0px 0px;
-	background-color: white;
+    background-color: white;
+    border-radius: 0;
+	 border-left-style: none;
+    border-bottom-style: none;
+    border-right-style: none;
+    border-top-style: none;
+    font-family: courier;
+    font-weight: bold;
 }
