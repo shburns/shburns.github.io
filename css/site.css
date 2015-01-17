@@ -1,30 +1,82 @@
-﻿.header {
-	text-align: center;
+﻿/*Necessary to eliminate the white border surrounding the body tag
+	and to establish a pale grey background.*/
+body {
+	margin: 0px;
 	font-family: 'Arial', 'Courier New';
-	vertical-align: middle;
-	color: white;
+	background-color: #DDD;
+}
+
+/*Remains a work in progress. Trying to establish the position of the header relative to the content
+	displayed in the dynamicBody node. Bit of a pain.*/
+.header {
+	text-align: left;
+	width: 100%;
+	color: #EEE;
 	background: none repeat scroll 0 0 #222;
-	position: relative;
-	padding: 40px 0 0 0;
+	position: fixed;
 	margin: 0;
-	overflow: hidden;
-	outline: 0 none;
-	border: 0 none;
+	top: 0px;
+	left: 0px;
 }
 
+/*Defines the copyright footer styling, fixing it to the bottom of the screen.
+	Not quite mobile friendly at the moment, but that will be resolved in time.*/
+.footer {
+	width: 100%;
+	background-color: #DDD;
+	text-align: right;
+	position: fixed;
+	bottom: 0px;
+}
+
+/*Centers the title or header for any dynamically generated content.*/
+.content-header {
+	text-align: center;
+}
+
+/*Use the fixed positioning with the explicitly set top and bottom parameters to keep
+	all dynamic content contained between header and footer.*/
+.dynamic-body-container {
+	overflow: auto;
+	position: fixed;
+	width: 100%;
+	top: 92px;
+	bottom: 20px;
+}
+
+/*The website title text.*/
 .title-text {
-	vertical-align: middle;
+	vertical-align: bottom;
 	font-weight: bold;
-	font-size: 50px;
+	font-size: 30px;
 }
 
-.special-button {
-    background-color: white;
-    border-radius: 0;
-	 border-left-style: none;
-    border-bottom-style: none;
-    border-right-style: none;
-    border-top-style: none;
-    font-family: courier;
-    font-weight: bold;
+/*Remains to be made functional. Attempting to build a rudimentary tab bar.*/
+.tab-container {
+	background-color: #222;
+	position: fixed;
+	width: 100%;
+	top: 70px;
+}
+
+/*Style the buttons to flatten them and color them to match the background of the content
+	over which they will be hovering, giving the appearance of tabs.*/
+.tab-button {
+	background-color: #DDD;
+	border-radius: 0;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-top-style: none;
+	font-family: courier;
+	font-weight: bold;
+	margin-right: 5px;
+	float: right;
+}
+
+/*Anticipating inserts of at least some code snippets, this will be used to style the code
+	distinctly enough to make it instantly recognizable on the page.*/
+.code-snippet {
+	font-family: 'Courier New';
+	color: #332;
 }

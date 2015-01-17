@@ -6,7 +6,7 @@
 		xhr.onreadystatechange = updateXhrState;
 
 		function updateXhrState() {
-			if (xhr.readyState < 4 || xhr.status !== 200) {
+			if (xhr.readyState < 4 || (xhr.status !== 200 && xhr.status !== 0)) {
 				return;
 			} else {
 				callback(xhr);
