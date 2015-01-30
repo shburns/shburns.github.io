@@ -1,7 +1,6 @@
 ﻿var xhr = {
 	load: function (url, callback, method) {
 		console.log("**entering xhr.load()**");
-
 		var xhr = new XMLHttpRequest();
 		xhr.onreadystatechange = updateXhrState;
 

@@ -3,27 +3,53 @@
 <head>
 	<title>GitHub - Sean Burns</title>
 	<link rel="stylesheet" href="/css/site.css" />
-	<script src="/scripts/xhr_.js"></script>
-	<script src="/scripts/test_js.js"></script>
+	<script src="/scripts/blog_entries.js"></script>
+	<script src="/scripts/xhr.js"></script>
+	<script src="/scripts/url_util.js"></script>
+	<script src="/scripts/nav.js"></script>
 </head>
 <body>
 	<div class="header">
-		<h1 class="title-text">On Philosophy and Engineering</h1>
+		<h1 class="title-text">A Portrait of the Engineer as a Young Dev&emsp;<small><small><small><small>(...sorry)</small></small></small></small></h1>
 	</div>
 	<div class="tab-container">
-		<button class="tab-button" type="button">theCoder</button>
-		<button class="tab-button" type="button">theCode</button>
-		<button class="tab-button" type="button">theBlog</button>
+		<button class="tab-button" type="button" id="aboutMeButton">theCoder</button>
+		<button class="tab-button" type="button" id="codeDescButton">theCode</button>
+		<button class="tab-button" type="button" id="blogButton">theBlog</button>
+	</div>
+	<div class="navigation-container">
+		<button class="nav-button prev" type="button" id="prevBlogEntry">&lt;&nbsp;previous</button>
+		<button class="nav-button next" type="button" id="nextBlogEntry">next&nbsp;&gt;</button>
 	</div>
 	<div class="dynamic-body-container">
 		<div id="dynamicBody"></div>
 	</div>
 	<div class="footer">
-		<span>&copy;Sean Burns&nbsp;-&nbsp;<span id="cur_date"></span></span>
+		<span><small>Site and its contents authored and maintained by Sean Burns&nbsp;-&nbsp;<span id="cur_date"></span></small></span>
 	</div>
-	<script>loadContentFromFileToNode("/templates/under_construction.html", "dynamicBody");</script>
 	<script>
-		document.getElementById("cur_date").innerHTML = new Date().getFullYear();
+		//	Page initialization function will parse query strings to see if a user is looking
+		//	for a particular blog entry (allows for url routing to entries) and sets the 
+		(function () {
+			var requestedBlog = parseUrlForBlogName();
+
+			//If there is a specified blog entry in the url, then load that entry and set the callbacks
+			//for the next/prev buttons to load the appropriate entries.
+			//Otherwise, just load the latest blog entry.
+			if (requestedBlog) {
+				currentEntry = requestedBlog;
+			}
+			setUrlToCurrentBlogTitle(currentEntry);
+			setContentNode(currentEntry);
+			setBlogNavigationButtons(currentEntry);
+			var prevButton = document.getElementById("prevBlogEntry");
+			prevButton.addEventListener("click", getPreviousBlogEntry);
+			var nextButton = document.getElementById("nextBlogEntry");
+			nextButton.addEventListener("click", getNextBlogEntry);
+			document.getElementById("cur_date").innerHTML = new Date().getFullYear();
+			//loadContentFromFileToNode("/content/under_construction.html", "dynamicBody");
+		})();
 	</script>
+	<script></script>
 </body>
 </html>

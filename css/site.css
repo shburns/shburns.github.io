@@ -6,8 +6,7 @@ body {
 	background-color: #DDD;
 }
 
-/*Remains a work in progress. Trying to establish the position of the header relative to the content
-	displayed in the dynamicBody node. Bit of a pain.*/
+/*Not exactly mobile friendly at the moment, but accomplishes the job in all tested browsers.*/
 .header {
 	text-align: left;
 	width: 100%;
@@ -19,7 +18,7 @@ body {
 	left: 0px;
 }
 
-/*Defines the copyright footer styling, fixing it to the bottom of the screen.
+/*Defines the attribution footer styling, fixing it to the bottom of the screen.
 	Not quite mobile friendly at the moment, but that will be resolved in time.*/
 .footer {
 	width: 100%;
@@ -40,8 +39,15 @@ body {
 	overflow: auto;
 	position: fixed;
 	width: 100%;
-	top: 92px;
+	top: 105px;
 	bottom: 20px;
+}
+
+/*Pads the content of the blog and 'about me'/'code' sections to give the text and content
+	more appealing margins*/
+div#dynamicBody {
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 /*The website title text.*/
@@ -70,8 +76,33 @@ body {
 	border-top-style: none;
 	font-family: courier;
 	font-weight: bold;
-	margin-right: 5px;
+	margin-left: 5px;
 	float: right;
+}
+
+.navigation-container {
+	background-color: #DDD;
+	position: fixed;
+	width: 100%;
+	top: 85px;
+	text-align: center;
+}
+
+/*Style the buttons to flatten them and color them to match the background of the content
+	over which they will be hovering, giving the appearance of tabs.*/
+.nav-button {
+	color: #222;
+	background-color: #DDD;
+	width: 65px;
+	border-radius: 0;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-top-style: none;
+	font-family: courier;
+	font-weight: bold;
+	width: 85px;
+	margin-left: 15px;
 }
 
 /*Anticipating inserts of at least some code snippets, this will be used to style the code
