@@ -31,23 +31,9 @@
 		//	Page initialization function will parse query strings to see if a user is looking
 		//	for a particular blog entry (allows for url routing to entries) and sets the 
 		(function () {
-			var requestedBlog = parseUrlForBlogName();
-
-			//If there is a specified blog entry in the url, then load that entry and set the callbacks
-			//for the next/prev buttons to load the appropriate entries.
-			//Otherwise, just load the latest blog entry.
-			if (requestedBlog) {
-				currentEntry = requestedBlog;
-			}
-			setUrlToCurrentBlogTitle(currentEntry);
-			setContentNode(currentEntry);
-			setBlogNavigationButtons(currentEntry);
-			var prevButton = document.getElementById("prevBlogEntry");
-			prevButton.addEventListener("click", getPreviousBlogEntry);
-			var nextButton = document.getElementById("nextBlogEntry");
-			nextButton.addEventListener("click", getNextBlogEntry);
+			setContentAndNavigationInfo();
+			setNavigationButtonEventHandlers();
 			document.getElementById("cur_date").innerHTML = new Date().getFullYear();
-			//loadContentFromFileToNode("/content/under_construction.html", "dynamicBody");
 		})();
 	</script>
 	<script></script>

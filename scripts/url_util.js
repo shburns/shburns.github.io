@@ -11,14 +11,20 @@ function parseUrlForBlogName() {
 	}
 }
 
-/*******************************************************************************************
-*	setUrlForCurrentBlogEntry
-*		Sets the url for the site for the blog entry to allow
-*		for direct navigation to a specific blog entry for link-sharing.
-******************************************************************************************/
-function setUrlToCurrentBlogTitle(currentBlogEntry) {
-	//Only append the blog title if the url doesn't already contain it.
-	if (!window.location.hash || window.location.hash.split('/').length <= 1) {
-		window.location = window.location + "#/" + currentBlogEntry;
-	}
+/********************************************************************************************
+*	getLocationRoot
+*		Gets the root URL for the location (basically, everything before the 'hash' delimiter)
+********************************************************************************************/
+function getLocationRoot() {
+	return window.location.href.split('#')[0];
+}
+
+/********************************************************************************************
+*	setUrlToCurrentContent
+*		Sets the window.location property (the url) to the root url plus the current entry name
+*@param currentContent
+*		The content title to append to the root url after the hash delimiter.
+*********************************************************************************************/
+function setUrlToCurrentContent(currentContent) {
+	window.location = getLocationRoot() + '#/' + currentContent;
 }

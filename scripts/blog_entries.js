@@ -1,6 +1,5 @@
 ﻿//The string for the latest blog entry to be fetched on initial page load.
-var latestEntry = 'on_software_ancestry',
-	currentEntry = latestEntry;
+var latestEntry = 'on_software_ancestry';
 
 /*
 *	A linked list of blog entries. Since there's no support for server site request handling, the logic for

@@ -1,4 +1,39 @@
-﻿//*************************************************************************************************
+﻿//********************************************************************************************
+// setContentAndNavigationInfo
+//		Initializes the page to load and look for any specified content directly onto the page
+//		and toggles visibility of navigational buttons as necessary. Used to handle initialization
+//		of the page as well as navigational behavior.
+//********************************************************************************************
+function setContentAndNavigationInfo() {
+	var requestedContent = parseUrlForBlogName();
+	var currentContent;
+
+	//If there is a specified blog entry or tab in the url, then load that entry and set the callbacks
+	//for the next/prev buttons to load the appropriate entries.
+	//Otherwise, just load the latest blog entry.
+
+	currentContent = (requestedContent != null && requestedContent != '') ? requestedContent : latestEntry;
+	setUrlToCurrentContent(currentContent);
+	setContentNode(currentContent);
+	setBlogNavigationButtons(currentContent);
+}
+
+//********************************************************************************************
+//	setNavigationButtonEventHandlers
+//		This will set all of the necessary event handlers for the 'onclick' events of different
+//		navigational buttons (blog navigation and tab navigation).
+//********************************************************************************************
+function setNavigationButtonEventHandlers() {
+	document.getElementById("prevBlogEntry").addEventListener("click", getPreviousBlogEntry);
+	document.getElementById("nextBlogEntry").addEventListener("click", getNextBlogEntry);
+	document.getElementById("aboutMeButton").addEventListener("click", loadAboutMe);
+	document.getElementById("codeDescButton").addEventListener("click", loadAboutCode);
+	document.getElementById("blogButton").addEventListener("click", loadBlogContent);
+
+	document.getElementById("cur_date").innerHTML = new Date().getFullYear();
+}
+
+//*************************************************************************************************
 // setContentNode
 //		A bit of a redundant wrapper function used to run the xhr.load function and
 //		define the standard callback.
@@ -57,15 +92,17 @@ function setBlogNavigationButtons(selectedEntry) {
 //********************************************************************************************
 function getNextBlogEntry(evt) {
 	console.log('entering: getNextBlogEntry');
-	var locationRoot = window.location.href.split('#')[0],
-		currentEntryName = parseUrlForBlogName(),
+	var currentEntryName = parseUrlForBlogName(),
 		nextEntryName = "";
 	for (var i = 0; i < entriesLinkedList.length; i++) {
 		if (entriesLinkedList[i].name == currentEntryName) {
 			nextEntryName = entriesLinkedList[i].next_entry;
 		}
 	}
-	window.location = locationRoot + '#/' + nextEntryName;
+	if (nextEntryName != null) {
+		setUrlToCurrentContent(nextEntryName);
+	}
+	setContentAndNavigationInfo();
 }
 
 //********************************************************************************************
@@ -74,13 +111,42 @@ function getNextBlogEntry(evt) {
 //********************************************************************************************
 function getPreviousBlogEntry(evt) {
 	console.log('entering: getPreviousBlogEntry');
-	var locationRoot = window.location.href.split('#')[0],
-		currentEntryName = parseUrlForBlogName(),
+	var currentEntryName = parseUrlForBlogName(),
 		prevEntryName = "";
 	for (var i = 0; i < entriesLinkedList.length; i++) {
 		if (entriesLinkedList[i].name == currentEntryName) {
-			nextEntryName = entriesLinkedList[i].prev_entry;
+			prevEntryName = entriesLinkedList[i].prev_entry;
 		}
 	}
-	window.location = locationRoot + '#/' + prevEntryName;
+	if (prevEntryName != null && prevEntryName != "") {
+		setUrlToCurrentContent(prevEntryName);
+	}
+	setContentAndNavigationInfo();
+}
+
+//********************************************************************************************
+// loadAboutMe
+//		Sets the url to navigate to the About Me tab.
+//********************************************************************************************
+function loadAboutMe() {
+	setUrlToCurrentContent('about_me');
+	setContentAndNavigationInfo();
+}
+
+//********************************************************************************************
+// loadAboutCode
+//		click handler for the Code tab button. Sets the url to navigate to the Code tab.
+//********************************************************************************************
+function loadAboutCode() {
+	setUrlToCurrentContent('about_the_code');
+	setContentAndNavigationInfo();
+}
+
+//********************************************************************************************
+//	loadBlogContent
+//		click handler for the Blog tab button. Loads the latest blog entry.
+//********************************************************************************************
+function loadBlogContent() {
+	setUrlToCurrentContent(latestEntry);
+	setContentAndNavigationInfo();
 }
