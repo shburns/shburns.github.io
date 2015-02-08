@@ -88,7 +88,7 @@ div#dynamicBody {
 	position: fixed;
 	width: 100%;
 	top: 85px;
-	text-align: center;
+	text-align: left;
 }
 
 /*Style the buttons to flatten them and color them to match the background of the content
@@ -113,4 +113,12 @@ div#dynamicBody {
 .code-snippet {
 	font-family: 'Courier New';
 	color: #332;
+}
+
+/*Used for blog entries quoting or referencing text from other sources to make them stand out.*/
+.block-quote {
+	background-color: #CCC;
+	text-align: center;
+	margin-left: 15%;
+	width: 70%;
 }

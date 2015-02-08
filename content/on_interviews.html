@@ -1,3 +1,105 @@
 ﻿<h1>On Interview Questions and Vetting Programmers</h1>
-<br />
-<p></p>
+<p>&emsp;After a co-worker sent me <a href="https://github.com/h5bp/Front-end-Developer-Interview-Questions">this</a> list of recommended interview questions for front-end developers, I gave it a careful read, had a long think about it (I was on my lunch break, but stuck in the office waiting on a co-worker, so thinking about not-code was exactly what I needed), and was left with a feeling of unease. It was a feeling I couldn't put my finger on, but wanted to. I was annoyed and I couldn't quite say why, which only made me that much more annoyed. So I sat, I read, and I thought. I considered the scenarios where these questions might be used as thoroughly as possible. I considered the stakes. I considered the challenges. I really thought.</p>
+<p>&emsp;Tech companies often need to fill fairly high-skilled positions for projects which usually demand a quick turnaround to remain profitable. There are swarms of people submitting their resumes whose full breadth of exprience is that they once tweaked their MySpace or tumblr page and have since considered themselves perfectly qualified for this kind of work. People lie on resumes all the time, fully expecting the job and its published responsibilities to be much easier to pick up than the 5 years of experience the employer is requesting would imply. There is a strong need to filter out the competent and the exemplary from the mediocre and the delusional. Every minute stuck in an interview with someone who couldn't tell you what HTML actually stands for is undeniably a minute wasted.</p>
+<p>&emsp;As I sat at my desk, deep in thought, steam rising from my tea, I internalized all of the challenges a typical candidate pool would present. I put myself in the shoes of those interviewers. <i>But</i> no matter how hard I tried, I couldn't shake the thought that nagged at me from about question 7 on... These questions are, for the most part, pretty crap.</p>
+<p>&emsp;Before you think that the only reason I only think they're bad is because I couldn't answer them myself, let me first say that, to some degree, I could answer all of the questions listed on that page. What's more is that I could complete all of the code challenges in under 5 minutes each. My frustration wasn't the venting of an impotent rage. And it wasn't frustration with the <i>whole</i> of the list of questions. The key phrase in my above 'criticism', is the "for the most part" bit. There were a number of useful and worthwhile questions in that list that would absolutely help those responsible for hiring front-end devs get useful information from their candidates.</p>
+<p>&emsp;The problem I have is that those questions are mixed in with questions that, on the surface, <i>seemed</i> to be of the same kind, but were subtly different in ways that could have negative implications for both the interviewer and the interviewee. That's the crux of it. The difference between the good and bad questions in the list is a difference in kind that is subtle enough to be difficult to filter them when using that as a template for your own interviews. Especially for a hiring manager that is more experienced in HR than the technical aspects of the company (pro-tip for any novice developers going into an interview: if there isn't at least <i>one</i> person who is technically knowledgable in the field your applying for involved in at least one of your interviews, that is a <strong>huge</strong> red flag). With that in mind, I started thinking about what, specifically, was the difference between the good questions and the bad questions and what to consider about your interview questions to make sure you're asking the good kind of questions and avoiding the bad kind.</p>
+<h2>The Challenges</h2>
+<p>&emsp;Interviewing developers at any level of the technology stack can be a daunting task filled with potential pitfalls. Off the top of my head, I can think of the following considerations to be made, along with countless others:</p>
+<ul>
+	<li>Questions should determine a minimum level of technical competence without ruling out qualified candidates who may not be familiar with formal definitions and concepts, even though they use them correctly every day.</li>
+	<li>Questions should direct the interview toward useful answers without coaching interviewees to desired answers.</li>
+	<li>Questions should challenge the interviewee into demonstrating problem solving skills without intimidating them into a sudden case of debilitating imposter syndrome.</li>
+	<li>Questions should determine a good company-culture fit as well as a competent candidate to fill the job.</li>
+</ul>
+<p>&emsp;It's a balancing act, and a tricky one. Writing decent interview questions that satisfies all of your needs and considerations is hard. Hell, just determining your needs and considerations can be a daunting task. There's a strong lure to these kinds of "Perfect Interview Questions for the Job You Need to Fill!" templates because it streamlines the process of preparation. Where I work, people are busy enough with their own work that interviews tend to seem like a necessary evil whose time-impact on anyone involved should be minimized. Preparation is a luxury most of my co-workers don't have. A list like this seems easy enough to use and count on to be useful, but if you don't think carefully about the questions and whether their answers tell you what you want to know, you could end up wasting everybody's time, including your own. With that in mind, let's look at the bad questions and figure out why they are less effective than they are distracting.</p>
+<h2>The Too-Vague</h2>
+<p>&emsp;I mentioned question 7 above because that was the first question that made me squint my eyes and wonder what kind of useful answer the interviewers could possibly hope to get out of it.</p>
+<div class="block-quote">"Can you describe your workflow when you create a web page?"</div>
+<p>&emsp;I will first acknowledge and then move past the fact that 'yes' is technically a valid answer to that question because I doubt anyone would be so foolish as to answer with just that. However, even a competent developer would have a hard time answering that question. In fact, I would argue that the best developers would <i>not</i> be able to answer that question because of how absurdly vague it is. Even with very simple pages, there are a handful of considerations to be made before creation of the page can begin. What kind of web-page is it? Does there need to be any client-side behavior or programming beyond simple behavioral scaffolding? Can I use my own discretion when choosing libraries, or do I have constraints? The answer to those questions might change the way I approach the application. If there needs to be any kind of complicated client-side behavior, I might start with getting unit tests and functional code up and running before I start worrying about the layout and UI design. Otherwise, I might just open up a blank .html file and start blocking out my page design. If I'm going to be required to use a library I've never used, or constrained from using a library I'm familiar with, I might start by familiarizing myself with the best practices for the new library or framework so I don't waste time spinning gears on trivial matters once I've started coding.</p>
+<p>&emsp;There is a note at the top of the page advising that you</p>
+<div class="block-quote">Keep in mind that many of these questions are open-ended and could lead to interesting discussions that tell you more about the person's capabilities than a straight answer would.</div>
+<p>&emsp;It may well be that the intention of this question is to find out if the candidate begins with those sorts of considerations, but the context of an interview might make an otherwise exceptional dev apprehensive about showing uncertainty on the process he or she has been asked about. It does no good because trying to trick someone or being underhanded with what you're looking to find out about the candidate (like trying to see if they start by thinking through the considerations that need to be made before implementation can start) can skew answers negatively. A better approach would be to explicitly ask 'what considerations do you typically make when starting a new web page'? Direct, and phrased in such a way as to expect a specific <i>type</i> of answer. No matter what the specific items are, the candidate is certain that the interviewer is looking for a list of questions that should be answered before one can start making a web page, and can focus on the content of his answer instead of the structure. The discussion can easily unfold from there, but the candidate would probably have a better idea of how to approach, present, and defend his response with a more clear wording of the question.</p>
+<p>&emsp;While I use that example as the most prominent and frustrating instance of those kinds of vague questions which might easily get useless answers from otherwise good candidates, it is hardly the only one. While there were far more problematic questions of a different <i>kind</i>, these kinds of overly vague question are, I think, the least useful, because they don't seem to serve any constructive purpose. A few choice examples are:</p>
+	<ul>
+		<li>
+			<span>"If you have 5 different stylesheets, how would you best integrate them into the site?"</span>
+			<br />
+			<span>--What do the stylesheets define? What the hell is even on "the site" in question?</span>
+		</li>
+		<li>
+			<span>"How would you optimize a website's assets/resources?"</span>
+			<br />
+			<span>--That would depend entirely on what the websites assets and resources are, wouldn't it?</span>
+		</li>
+		<li>
+			<span>"How would you approach fixing browser-specific styling issues?"</span>
+			<br />
+			<span>--Which browser is having issues?!</span>
+		</li>
+		<li>
+			<span>"How do you organize your code? (module pattern, classical inheritance?)"</span>
+			<br />
+			<span>--Once again, this depends on the needs of the project. A good dev should be able to switch between both.</span>
+		</li>
+		<li>
+			<span>"When do you optimize your code?"</span>
+			<br />
+			<span>--What is the code doing? What kind of optimization would need to be done (because yes, there are different kinds)? Does it even need to be optimized, or would I be wasting my time on something for zero percievable benefit (as most unnecessary optimization tends to do).</span>
+		</li>
+		<li>
+			<span>"Explain AJAX in as much detail as possible."</span>
+			<br />
+			<span>--What about AJAX? That acronym just means asynchronous javascript and xml. More specifically it's the idea of using Javascript and XmlHttpRequests to dynamically manipulate and change the content of a page without a user having to reload. That can be used in <i>so many</i> different ways to accomplish innumerable things. If you're expecting that answer, that's the wrong question to ask for it. If you're expecting a different answer, you probably have a very specific and arbitrary understanding of what "AJAX" means and shouldn't be interviewing candidates.</span>
+		</li>
+	</ul>
+<p>&emsp;These questions are not going to get you useful answers from most competent developers because they contain insufficient information for people familiar with those issues and the considerations that need to be made to deal with them. They are either underhanded attempts to "challenge" the candidate into thinking about those considerations, or worse, they are being asked because the interviewer doesn't really understand <i>why</i> they're bad questions in the first place, in which case, refer to my pro-tip about technically competent interviewers.</p>
+<h2>The Too-Specific</h2>
+<p>&emsp;Having addressed the problematic questions with too-vague phrasing to reliably elicit a useful response from a candidate, I next want to look at the flip side of the coin: esoteric and too-specific questions. This type of question definitely seemed to be the most common type on that list. It is also the most likely to rule out otherwise competent and talented candidates for foolish reasons. In order to make my point here, I think it's best to start with the questions to which I am referring:</p>
+<ul>
+	<li>"What is FOUC? How do you avoid FOUC?"</li>
+	<li>"Explain why the following doesn't work as an IIFE: function foo(){ }();."</li>
+	<li>"Why is it called a Ternary expression, what does the word "Ternary" indicate?"</li>
+	<li>"Explain "hoisting"."</li>
+	<li>"AMD vs. CommonJS?"</li>
+	<li>"List as many values for the display property that you can remember."</li>
+</ul>
+<p>&emsp;These questions have a distinct quality of being so specific as to be trivial. By which I mean, it is probably a bad idea to expect a programmer to know, off the top of their head, in the context of an interview, what a 'ternary' expression is, even if that developer uses them all of the time everywhere in their code when they want to write terse and simple conditionals. I use ternary expressions whenever I can fit the whole line of code on an 80 character line because I have a habit of minimizing vertical space in my code. But the only reason I happened to know the answer to that question when I read it was because, a couple days prior, I had a friend refer to some sample code I had written as "infected with ternaries" and I had to look it up. I used them constantly and still had to look up what about my code he was referring to because that's an arbitrary bit of knowledge and has nothing to do with my ability to use them where appropriate.</p>
+<p>&emsp;That exact same problem applies to every item on that list. Even assuming the interviewer has the common sense to explicitly say the full names of the concepts which, in the questions, are represented as acronyms, they're still bad questions because they ask about specifically what those terms apply to, instead of using a brief description and asking about how the developer deals with the concepts themselves. It assumes a knowledge of arbitrary and uncommonly used acronym identifiers to common problems. Most front-end developers I know wouldn't know what "FOUC" stood for off the top of their heads, but would know exactly what it is if it were described to them, <strong>and</strong> would know exactly how to avoid it. The problem with those questions increases exponentially in the case where the interviewer uses the acronyms instead of explicitly stating the full name of the concept.</p>
+<p>&emsp;The specific problem with these questions is two-fold. First, it makes the interviewer come off as pretentious in a "Look how much trivial shit about front-end terminology I know... do you know it?" kind of way. Second, it doesn't help to eliminate candidates that may be terrible developers while also allowing for the possibility of eliminating talented devs who aren't familiar with the specific terminology of those concepts. I already gave the example of using ternary expressions when a short conditional needs to be expressed (I think, a pretty solid situation for their use) without knowing that those expressions were "ternary". But even worse, consider a candidate that knows exactly what 'hoisting' is, but uses it horribly by declaring variables at inconsistent points in his code such that readability goes out the window. Or someone who knows that an IIFE is an "immediately invoked function expression", and how to create them, but uses them incorrectly or unnecessarily, thus making it more difficult to discern when specific bits of behavioral code are being executed and making their own code that much less readable. Using only that question, you've given yourself a false impression of competency based on what amounts to trivial knowledge.</p>
+<h2>The Good</h2>
+<p>&emsp;Feeling like I've rambled on enough about the questions that got under my skin, I'd like to take a moment to at least acknowledge the well-worded and well-structured questions in the list. There were quite a few and they could easily be used as a guide for interviewers trying to direct their line of questioning more productively. Here are a few examples and why I think they work as interview questions.</p>
+<ul>
+	<li>
+		<span>"Which version control systems are you familiar with?"</span>
+		<br />
+		<span>-- This works because it will elicit a direct response from the candidate, provide useful information, while still not guiding the candidate to the desired answer (i.e. - "Have you ever used Git/SVN/TFS?").</span>
+	</li>
+	<li>
+		<span>"What tools do you use to test your code's performance?"</span>
+		<br />
+		<span>-- A perfect question to determine whether or not your candidate takes site performance into consideration and where his or her skillsets currently lie.</span>
+	</li>
+	<li>
+		<span>"What are data- attributes good for?"</span>
+		<br />
+		<span>-- This is an example of a specific question that isn't <i>so</i> specific as to be trivial. Anyone who claims to be familiar with HTML5 should have no problem answering this question and so this gives you a clear idea about a candidates practical front-end literacy</span>
+	</li>
+	<li>
+		<span>"Describe the difference between a cookie, sessionStorage and localStorage."</span>
+		<br />
+		<span>-- Another example of an appropriately specific question. Will weed out someone who is still too green for more critical development tasks (if that's your objective) while giving you a solid idea of how the more appropriate candidates view the distinction between those three features.</span>
+	</li>
+	<li>
+		<span>"Explain how a browser determines what elements match a CSS selector."</span>
+		<br />
+		<span>-- This is a fantastic question for a front-end developer because CSS is such a critical part of the job and defining sufficiently specific selectors is a skill that any decent developer will have. What's more, the question itself is perfectly to the point.</span>
+	</li>
+	<li>
+		<span>"Explain how this works in JavaScript"</span>
+		<br />
+		<span>-- Another fantastic question that touches on a topic that any decent developer should understand <i>and</i> can tell you a lot about the overall skill-level of the developer based on how detailed their answer gets.</span>
+	</li>
+</ul>
+<p>&emsp;Those and many more questions on that list are great ways to get to the heart of two questions interviewers should be trying to answer about their candidates: (1) Can the candidate do this job?; and (2) How well can the candidate do this job?. The important thing though, is to think about what you need to find out about your candidate, and then tune your questions to getting that information as accurately as possible. For every question, think about what the 'correct' answer might sound like, and then think about what that answer would tell you about the candidate. Think about whether the question is likely to get the response you're looking for without any further clarification. Think about all of these things and more.</p>
+<p>&emsp;Ultimately, I think the best advice my analysis has given me is that, you have to do exactly what this list of questions is trying to do for you... You have to prepare. A little preparation can go a long way towards productive growth for both the candidate and the company. You're bringing a human being into a work environment where they will (hopefully) be challenged and trusted with a mountain of responsibility. If and when you bring someone on board, their success in their new role will be much more important to them than it will be to you. The power to impact a person's life like that probably deserves more of your time than picking questions out of a list and throwing them against the wall to see what sticks.</p>

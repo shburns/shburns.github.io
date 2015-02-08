@@ -1,1 +1,22 @@
 ﻿<h1>About My Code</h1>
+<p>&emsp;The repositories I'm posting on GitHub are less "useful open-source tools for others" and more "here's some stuff I wrote to test a concept I was learning and I hope it's instructive for others" type repositories. As such, they're not exactly robust or feature-rich. They're more samples and snippets. As I polish up and document some of the projects I'm working on in my own time, I'll begin posting functional pieces of them to public repositories and hopefully they'll be a bit more useful for at least a few people. Until then though, anyone whose curious about compilers, multi-threaded processing, or evaluating the performance of differnt approaches to a given problem should feel free to check out my code.</p>
+<h2>The Repositories</h2>
+<ul style="font-size:14px;">
+	<li>
+		<a href="http://github.com/shburns/fixed_point_diagnostics">Fixed Point Diagnostic Test</a>
+		<p>&emsp;This code is incredibly simple and meant to be instructive more than anything else. It's the first part of a project I'm working on to port the Doom source code over to the .NET CLR in C#. I was looking through their fixed point arithmetic implementation and figured it was senseless to port that code since hardware today is optimized to perform floating point arithmetic. Then I became curious about <i>how</i> optimized hardware had become. Then I decided that, since I'd need to use diagnostic timing to optimize my code eventually anyway, I may as well play around with a trivial case. An hour later, this test driver showed the extent to which native floating point outperformed a simple 16.16 fixed point implementation. It amounted to a 30% - 60% speed increase over sufficiently large test cases.</p>
+	</li>
+	<li>
+		<a href="http://github.com/shburns/multi-threaded_processing_simulator">Multi-Threading Demo</a>
+		<p>&emsp;This small project was once again written for instructive purposes. I was having a somewhat illuminating discussion on the distinction between asynchronous processing and multi-threaded processing with a friend and realized I didn't see the dividing line as clearly as I thought. Combing through an old <a href="http://www.amazon.com/Operating-Systems-Internals-Principles-Edition/dp/013230998X/ref=pd_sim_b_2?ie=UTF8&refRID=1KA451S5G664X431X6EY">Operating Systems</a> text book I found the chapters about threading, concurrency, and deadlock and decided to write a simple implementation of a thread processor.</p>
+	</li>
+	<li>
+		<a href="http://github.com/shburns/toyc_compiler">ToyC Compiler</a>
+		<p>&emsp;Originally done for my Compilers class at VCU, this is a full compiler that will take source code written in a fairly small (though computationally complete) subset of the C programming language and compile it into instructions for the Jasmine assembly language for the Java Virtual Machine. I've since lost the abstract syntax definition, but it can be pretty easily discerned from the "abstractSyntax" directory in the compilers/toyc/src folder.</p>
+		<p>&emsp;The bulk of the work is done in the compilers/toyc/src/parser directory, where the lexer and parser both reside. The interfaces and a few utility files were provided by the instructor, but the rest of the code is mine.  I should probably also note that it is, in its current state, technically only 2/3 of a compiler since the lexer and parser both work just fine (though I never did get the parser to pretty-print the AST quite right), but the code generator code is still bugged. I intend to finish this at some point, but my other projects currently keep me from doing so.</p>
+	</li>
+	<li>
+		<a href="http://github.com/shburns/shburns.github.io">GitHub Pages Code</a>
+		<p>&emsp;This is the repository for this very website. It's simple, lightweight, and functional, which is exactly and exclusively what I want from a blog site anyway. The least interesting of my repos, but necessary for this site to exist, so there it is.</p>
+	</li>
+</ul>
