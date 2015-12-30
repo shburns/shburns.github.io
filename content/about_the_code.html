@@ -3,6 +3,10 @@
 <h2>The Repositories</h2>
 <ul style="font-size:14px;">
 	<li>
+		<a href="http://github.com/shburns/cdecl">C Declarator Parser</a>
+		<p>&emsp;I was reading the book <a href="http://www.amazon.com/gp/product/0131774298?keywords=Deep%20C%20Secrets&qid=1451459684&ref_=sr_1_1&sr=8-1">"Expert C Programming: Deep C Secrets"</a> by Peter Van Der Linden (which I actually highly recommend to anyone who actually wants to work in C or C++ professionally), and I happened upon a programming challenge in the 6th chapter of the book to write a C declarator parser to make sense of some of the more convoluted C declarations made possible by the standard. Given that I hadn't actually written much in C (having only read a few books on it to wrap my mind around it's nuances before getting my feet wet and getting practiced), this actually seemed like a perfect "Hello, World" type project for me. It would get me a bit more comfortable with it, while helping me really internalize and understand C declarators. My implementation ended up being a fair bit less elegant than Mr. Van Der Linden's, but I'm pleased with it (while still also being open to feedback).</p>
+	</li>
+	<li>
 		<a href="http://github.com/shburns/fixed_point_diagnostics">Fixed Point Diagnostic Test</a>
 		<p>&emsp;This code is incredibly simple and meant to be instructive more than anything else. It's the first part of a project I'm working on to port the Doom source code over to the .NET CLR in C#. I was looking through their fixed point arithmetic implementation and figured it was senseless to port that code since hardware today is optimized to perform floating point arithmetic. Then I became curious about <i>how</i> optimized hardware had become. Then I decided that, since I'd need to use diagnostic timing to optimize my code eventually anyway, I may as well play around with a trivial case. An hour later, this test driver showed the extent to which native floating point outperformed a simple 16.16 fixed point implementation. It amounted to a 30% - 60% speed increase over sufficiently large test cases.</p>
 	</li>
